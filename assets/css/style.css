@@ -1,0 +1,92 @@
+
+:root {
+  --darkblue: hsl(240, 100%, 10%);
+  --lightblue: #ebfdff;
+  --pink: #e94e68;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'PT Sans', sans-serif;
+}
+
+body {
+  background-color: var(--darkblue);
+}
+
+h1 {
+  color: var(--lightblue);
+  font-family: 'Righteous';
+}
+
+/* a:hover,
+a:active {
+  background: var(--pink);
+} */
+
+/* button:hover,
+button:active {
+  background: var(--pink);
+} */
+
+.has-bg-img {
+  background-image: url('https://d2cbg94ubxgsnp.cloudfront.net/Pictures/2000xAny/7/3/4/517734_gettyimages556919061_513895.jpg');
+  background-position: center center;
+  background-size: cover;
+}
+
+/* .hero {
+  background-color: var(--darkblue);
+} */
+
+.search-this-body {
+  padding: 5px;
+  margin: 5px;
+  text-align: center;
+
+  background-color: grey;
+  color: white;
+
+  cursor: pointer;
+}
+
+.search-this-body:hover {
+  opacity: 50%;
+}
+
+.ui-autocomplete-category {
+  font-weight: bold;
+  padding: .2em .4em;
+  margin: .8em 0 .2em;
+  line-height: 1.5;
+}
+
+.ui-autocomplete {
+  max-height: 300px;
+  overflow-y: auto;
+  /* prevent horizontal scrollbar */
+  overflow-x: hidden;
+}
+
+#body-name {
+  display: none;
+}
+
+#search-content {
+  display: none;
+}
+
+#search-content-holder {
+  align-items: flex-end;
+}
+
+#search-break {
+  display: none;
+}
+
+@media screen and (max-width: 1240px) {
+  .columns {
+    flex-direction: column;
+    align-content: center;
+  }
+}

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=PT+Sans&family=Righteous&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=PT+Sans&family=Righteous&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css"
+    integrity="sha512-IgmDkwzs96t4SrChW29No3NXBIBv8baW490zk5aXvhCD8vuZM3yUSkbyTBcXohkySecyzIrUwiF/qV0cuPcL3Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>SpaceGoku</title>
+  <link rel="shortcut icon" href="./assets/favicon/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="./assets/favicon/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+</head>
+
+<body>
+
+  <header class="hero is-small"> 
+    <!-- Hero head: will stick at the top -->
+    <nav class="navbar">
+      <div class="container mr-6 mt-4">
+        <div id="navbarMenuHeroA" class="navbar-menu">
+          <div class="navbar-end">
+            <button onclick="window.location.href= 'index.html' " class="is-hovered">
+              <a class="navbar-item has-background-info-light m-1">
+                <p class="has-text-grey-dark">Home</p>
+              </a>
+            </button>
+            <button onclick="window.location.href= 'about-us.html' " class="is-hovered">
+              <a class="navbar-item has-background-info-light m-1">
+                <p class="has-text-grey-dark">Contact Us</p>
+              </a>
+            </button>
+            <button onclick="window.location.href= 'resources.html' " class="is-hovered">
+              <a class="navbar-item has-background-info-light m-1">
+                <p class="has-text-grey-dark">Resources</p>
+              </a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <br>
+    <!-- Hero content: will be in the middle -->
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <h1 class="title has-text-info-light is-size-1">
+          SpaceGoku
+        </h1>
+      </div>
+    </div>
+    <br>
+    <!-- Hero footer: will stick at the bottom -->
+    <div class="hero-foot">
+      <div class="container ml-5 mb-4">
+        <form class="field is-grouped">
+          <p class="control">
+            <input class="input" id="planet-input" type="text" placeholder="Search">
+          </p>
+          <p class="control">
+            <button class="button is-hovered is-default">
+              <a class="has-text-grey-dark">
+                Submit
+              </a>
+            </button>
+          </p>
+        </form>
+      </div>
+      </form>
+  </header>
+
+  <main class="has-background-grey-dark">
+
+    <h1 class="mgh-large has-background-info-light is-size-2 has-text-centered has-text-grey-dark apod">Astronomy Photo
+      of the Day</h1>
+    <br class="apod">
+    <!-- Astronomy Photo of the Day -->
+    <div
+      class="columns is-flex-wrap-wrap is-four-fifths is-widescreen is-vcentered has-background-grey-dark apod-container apod">
+      <div class="columns is-flex-wrap-wrap is-vcentered">
+        <!-- Photo -->
+        <figure class="image column m-6 pl-6 is-7-widescreen is-8-tablet is-flex-wrap-wrap has-background-grey-dark">
+          <img id="apod-img" class="is-centered" src="" alt="daily photo">
+        </figure>
+        <!-- APOD Description -->
+        <article class="column is-3-widescreen m-6 has-text-info-light is-flex-wrap-wrap has-background-grey-dark">
+          <h1 id="apod-title" class="title has-text-info-light has-text-centered is-3"></h1>
+          <p id="apod-explanation" class="content is-3"></p>
+          <p id="apod-copyright" class="subtitle is-3"></p>
+        </article>
+      </div>
+    </div>
+
+    <!-- Chosen Body -->
+    <h1 class="mgh-large is-10 has-background-info-light is-size-2 has-text-centered has-text-grey-dark" id='body-name'>
+      CHOSEN PLANET</h1>
+    <br id="search-break">
+    <div class="columns has-background-grey-dark" id="search-content">
+      <div class="columns is-flex-direction-row is-flex-wrap-wrap-reverse is-centered is-vcentered" id="search-content-holder">
+        <!-- Accordian of Facts -->
+        <article id="accordion" class="column m-6 is-5-desktop is-4-tablet mgh-large">
+          <h3>Classification and discovery</h3>
+          <div>
+            <p id="body-type-text">placeholder</p>
+            <p id="discoverer-text">placeholder</p>
+            <p id="discovery-date-text">placeholder</p>
+          </div>
+          <h3>Orbit and Rotation</h3>
+          <div>
+            <p id="orbits-around-text">placeholder</p>
+            <p class='search-this-body' id='orbits'>placeholder</p>
+            <p id="apoapsis-text">placeholder</p>
+            <p id="periapsis-text">placeholder</p>
+            <p id="orbital-period-text">placeholder</p>
+            <p id="rotational-period-text">placeholder</p>
+          </div>
+          <h3>Size, mass, density, and gravity</h3>
+          <div>
+            <p id="equa-radius-text">placeholder</p>
+            <p id="polar-radius-text">placeholder</p>
+            <p id="mean-radius-text">placeholder</p>
+            <p id="mass-text">placeholder</p>
+            <p id="density-text">placeholder</p>
+            <p id="gravity-text">placeholder</p>
+          </div>
+          <!--We'll give the info panels that will only be displayed conditionally classes to mark them as such-->
+          <h3 class="has-moons">Moons</h3>
+          <div class="has-moons" id='moons-div'></div>
+        </article>
+        <!-- Photo of Body -->
+        <figure class="image column m-6 is-5-desktop is-6-tablet is-7-mobile mgh-large">
+          <img id="body-image" class="" src="" alt="photo of selected body">
+        </figure>
+      </div>
+    </div>
+
+    <footer class="has-background-grey-dark has-text-centered has-text-info-light">
+      <p class="is-fullheight">
+        <br>
+        <br>
+        Made by Group 4
+        <br>
+        <br>
+      </p>
+    </footer>
+
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sass.js/0.11.1/sass.js"
+    integrity="sha512-o3uttbIx94NYlTeI0PE6dm6OJRORmL1iBJqeAylDhVm+iwPwCl/x566K4hBFUoSPkr7hG8tur0WVCUR+wNsRXA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="./assets/js/body-images.js"></script>
+  <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
